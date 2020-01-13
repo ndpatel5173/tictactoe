@@ -1,7 +1,23 @@
+let track_of_player = "x";
+let num_of_turns = 0;
+let game_status = false;
 
+function performLogic(buttonId,tileId){
+    $(buttonId).html(track_of_player);
+    if(track_of_player === "x"){
+        track_of_player = "o";
+    } 
+    else if(track_of_player === "o"){
+        track_of_player = "x";
+    }
+}
+function end_game(){
+    if(num_of_turns > 8 && game_status === false){
+        $("h1").html("It's a draw!");
+        game_status = true;
 
-
-
+    }  
+}
 
 
 
